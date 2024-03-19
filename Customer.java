@@ -1,132 +1,67 @@
+package object_class;
 import java.util.Scanner;
-class  ICICIBank
+class Customer1 
 {
-	private String branch;
-	private String ifscCode;
-	public String getBranch()
+	int cId;
+	String cName;
+	String cAddress;
+	long cMob;
+	Customer1(int cId,String cName,String cAddress,long cMob)
 	{
-		return branch;
+		this.cId=cId;
+		this.cName=cName;
+		this.cAddress=cAddress;
+		this.cMob=cMob;
 	}
-	public String getIfscCode()
+	@Override
+	public String toString()
 	{
-		return ifscCode;
-	}
-	ICICIBank(String branch,	String ifscCode)
-	{
-		this.branch = branch;
-		this.ifscCode = ifscCode;
-	}
-}
-class LoanAccount extends ICICIBank
-{
-	private long loanAmount;
-	private double loanTenure;
-	public long getLoanAmount()
-	{
-		return loanAmount;
-	}
-	public double getLoanTenure()
-	{
-		return loanTenure;
-	}
-	LoanAccount(String branch,String ifscCode, long loanAmount,double loanTenure)
-	{
-		super(branch, ifscCode);
-		this.loanAmount = loanAmount;
-		this.loanTenure = loanTenure;
-	}
-	public void details()
-	{
-		System.out.println("======================");
-		System.out.println("Branch: "+getBranch());
-		System.out.println("IFSCcode: "+getIfscCode());
-		System.out.println("Loan Amount: "+getLoanAmount());
-		System.out.println("Loan Tenure: "+getLoanTenure());
-		System.out.println("======================");
-
-	}
-}
-class CurrentAccount extends ICICIBank
-{
-	private String accHolderName;
-	private long accNumber;
-	public String getAccHolderName()
-	{
-		return accHolderName;
-	}
-	public long getAccNumber()
-	{
-		return accNumber;
-	}
-	CurrentAccount(String branch,String ifscCode, String accHolderName, long accNumber)
-	{
-		super(branch, ifscCode);
-		this.accHolderName=accHolderName;
-		this.accNumber=accNumber;
-	}
-	public void details()
-	{
-		System.out.println("======================");
-		System.out.println("Branch: "+getBranch());
-		System.out.println("IFSCcode: "+getIfscCode());
-		System.out.println("Account Holder Name: "+getAccHolderName());
-		System.out.println("Account Number: "+getAccNumber());
-		System.out.println("======================");
+		System.out.println("*************");
+		System.out.println("Customer ID: "+cId);
+		System.out.println("Customer Name: "+cName);
+		System.out.println("Customer Address: "+cAddress);
+		System.out.println("Customer Mobile: "+cMob);
+		return "";
+		
 	}
 }
 class Customer
 {
-	static String a;
-	static String b;
-	static long c;
-	static double d;
-	static String e;
-	static long f;
-	public static void getLoan()
+	static int cId;
+	static String cName;
+	static String cAddress;
+	static long cMob;
+	public static void form()
 	{
 		Scanner s = new Scanner(System.in);
-		System.out.println("*****Enter Loan Details******");
-		System.out.println("Enter Bank name: ");
-		a=s.nextLine();
-		System.out.println("Enter IFSC code: ");
-		b=s.nextLine();
-		System.out.println("Enter loan amount: ");
-		c=s.nextLong();
-		System.out.println("Enter loan tenure: ");
-		d=s.nextDouble();
-	}
-	public static void getCurrent()
-	{
-		Scanner s = new Scanner(System.in);
-		System.out.println("*****Enter Current Account Details******");
-		System.out.println("Enter Bank name: ");
-		a=s.nextLine();
-		System.out.println("Enter IFSC code: ");
-		b=s.nextLine();
-		System.out.println("Enter account holder name: ");
-		e=s.nextLine();
-		System.out.println("Enter account number: ");
-		f=s.nextLong();
+		System.out.println("*************");
+		System.out.println("Enter ID:");
+		cId = s.nextInt();
+		s.nextLine();
+		System.out.println("Enter Name:");
+		cName = s.nextLine();
+		System.out.println("Enter Address:");
+		cAddress = s.nextLine();
+		System.out.println("Enter Mobile Number:");
+		cMob = s.nextLong();
 	}
 	public static void main(String[] args) 
 	{
-		getLoan();	
-		LoanAccount c1 = new LoanAccount(a,b,c,d);
-		c1.details();
-		getLoan();	
-		LoanAccount c2 = new LoanAccount(a,b,c,d);
-		c2.details();
-		getLoan();	
-		LoanAccount c3 = new LoanAccount(a,b,c,d);
-		c3.details();
-		getCurrent();
-		CurrentAccount c4 = new CurrentAccount(a,b,e,f);
-		c4.details();
-		getCurrent();
-		CurrentAccount c5 = new CurrentAccount(a,b,e,f);
-		c5.details();
-		getCurrent();
-		CurrentAccount c6 = new CurrentAccount(a,b,e,f);
-		c6.details();
+		form();
+		Customer1 c1=new Customer1(cId,cName, cAddress, cMob);
+		System.out.println(c1);
+		form();
+		Customer1 c2=new Customer1(cId,cName, cAddress, cMob);
+		System.out.println(c2);
+		form();
+		Customer1 c3=new Customer1(cId,cName, cAddress, cMob);
+		System.out.println(c3);
+		form();
+		Customer1 c4=new Customer1(cId,cName, cAddress, cMob);
+		System.out.println(c4);
+		form();
+		Customer1 c5=new Customer1(cId,cName, cAddress, cMob);
+		System.out.println(c5);
 	}
+
 }
