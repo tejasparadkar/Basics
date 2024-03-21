@@ -1,32 +1,84 @@
-class Product
+package object_class;
+
+import java.util.Scanner;
+
+class Product1
 {
-	long productId;
-	String productName;
-	String productBrand;
-	double productPrice;
-	Product(long productId, String productName, String productBrand, double productPrice)
+	int pNo;
+	String pName;
+	double pPrice;
+	int pQuantity;
+	public Product1(int pNo, String pName, double pPrice, int pQuantity) 
 	{
-		this.productId=productId;
-		this.productName=productName;
-		this.productBrand=productBrand;
-		this.productPrice=productPrice;
+		super();
+		this.pNo = pNo;
+		this.pName = pName;
+		this.pPrice = pPrice;
+		this.pQuantity = pQuantity;
 	}
-	public void productDetails()
+	@Override
+	public String toString()
 	{
-		System.out.println("Product ID: "+productId);
-		System.out.println("Product Name: "+productName);
-		System.out.println("Product Brand: "+productBrand);
-		System.out.println("Product Price: "+productPrice);
-		System.out.println("=========================");
+		System.out.println(super.toString());
+		System.out.println("Product No: "+pNo);
+		System.out.println("Product Name: "+pName);
+		System.out.println("Product Price: "+pPrice);
+		System.out.println("Product Quantity: "+pQuantity);
+		return" ";
 	}
+	
+	@Override
+	public int hashCode()
+	{
+		return pNo;
+	}
+	
+}
+
+public class Product 
+{
 	public static void main(String[] args) 
 	{
-		Product p1=new Product(12345,"XC90","Volvo",567889);
-		p1.productDetails();
-		Product p2=new Product(6789,"GLA","Mercedes",543534);
-		p2.productDetails();
-		Product p3=new Product(123789,"X1","BMW",243567);
-		p3.productDetails();
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter id: ");
+		int a1=s.nextInt();
+		System.out.println("Enter name: ");
+		s.nextLine();
+		String b1=s.nextLine();
+		System.out.println("Enter price: ");
+		double c1=s.nextDouble();		
+		System.out.println("Enter Quantity: ");
+		int d1=s.nextInt();		
+		Product1 p1 = new Product1(a1,b1,c1,d1);
+		System.out.println(p1);
 		
+		
+		System.out.println("Enter id: ");
+		int a2=s.nextInt();
+		System.out.println("Enter name: ");
+		s.nextLine();
+		String b2=s.nextLine();
+		System.out.println("Enter price: ");
+		double c2=s.nextDouble();		
+		System.out.println("Enter Quantity: ");
+		int d2=s.nextInt();	
+		Product1 p2 = new Product1(a2,b2,c2,d2);
+		System.out.println(p2);
+		
+		
+		System.out.println("Enter id: ");
+		int a3=s.nextInt();
+		System.out.println("Enter name: ");
+		s.nextLine();
+		String b3=s.nextLine();
+		System.out.println("Enter price: ");
+		double c3=s.nextDouble();		
+		System.out.println("Enter Quantity: ");
+		int d3=s.nextInt();	
+		Product1 p3 = new Product1(a3,b3,c3,d3);
+		System.out.println(p3);
+		
+		System.out.println(p1.pName.equals(p3.pName));
 	}
+
 }
