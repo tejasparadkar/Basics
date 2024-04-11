@@ -18,7 +18,14 @@ public class SumofNumbers {
 		}
 		while(i<11);
 		System.out.println(sum);
-
+		i=1;
+		sum=0;
+		while(i<11)
+		{
+			sum=sum+i;
+			i++;
+		}
+		System.out.println(sum);
 	}
 
 }

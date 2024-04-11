@@ -10,7 +10,26 @@ public class ProductofNumbers {
 		}
 		System.out.println(product);
 	
+		product=1;
+		int i=1;
+		while(i<6)
+		{
+			product=product*i;
+			i++;
+		}
+		System.out.println(product);
+		
+		product=1;
+		i=1;
+		do
+		{
+			product=product*i;
+			i++;
+		}
+		while(i<6);
+		System.out.println(product);
 		
 	}
 
 }
+
