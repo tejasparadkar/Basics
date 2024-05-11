@@ -1,0 +1,11 @@
+How to create an array??
+
+1.by using array literal
+datatype [] variable = {val1,val2,val3,......};
+
+2.using new keyword
+datatype[] variable = new datatype[size];
+
+two exceptions are:
+1.NegativeArraySizeException
+2.ArrayIndexOutOfBoundsException
