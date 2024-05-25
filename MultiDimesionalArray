@@ -1,0 +1,17 @@
+Types of Array
+-----Single Dimensional Array --> {10,20,30,40} --> 1-Dimensional Array
+-----Multidimensional Array --> (Array of Arrays) --if multiple arrays store in one array. 
+     {0,2,4,6} {1,3,5,7} {2,3,5,7} MA = {1st array store at index zero , 2nd array store at index 1 , 3rd array store at index 2} -->2-Dimensional Array
+ 2-D array --> where 1-D array stored
+ 3-D array --> where 2-D array stored and so on
+
+
+**************************************************************
+
+
+How to create 2-D array?
+Two syntax
+1) using array literals
+            data_type[][] variable = {{v1,v2,v3.....},{v1,v2,v3.....},.....};
+2) using new keyword
+            data_type[][] variable = new data_type[outer_size][inner_size];
