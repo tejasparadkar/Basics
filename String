@@ -1,0 +1,32 @@
+String classes used to create string.
+
+String object is a group of characters.
+
+1.String
+objects will be immutable(not able to modify)
+present in java.lang package
+it is a final class(it cannot be inherited)
+implements three interface
+a. CharSequence
+b. Comparable
+c. Serializable (needed to convert data into byte stream)
+
+How to create String object
+a. using String literal
+String variable = String literal;
+e.g. String s = "burger";
+b. using new keyword
+String variable = new String(String literal);
+e.g. String s = new String("pizza");
+
+If we create a string object using String literal then object is created in string constant pool where if the object already exist it returns the address of same object.
+
+If we create a object using new keyword object is created in heap area and address is returned. Along with that one more object will be created in the string constant pool where address will be returned to JVM. 
+
+
+
+2.StringBuffer
+objects will be mutable (changes are allowed) and thread safe (will process only one thread at a time)
+
+3.String builder
+mutable object but not thread safe
