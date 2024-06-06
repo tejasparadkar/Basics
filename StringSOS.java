@@ -23,20 +23,28 @@ S = SOSSPSSQSSOR, and signal length = 12. They sent 4 SOS messages (i.e.: 12/3=4
 public class StringSOS {
 	public static int countTamper(String s1)
 	{
-		int i=s1.indexOf("S");
-		int a=3;
-		int count =0;
-		for(;i<s1.length();i++)
+		if(s1.length()%3==0)
 		{
-			String s2 = s1.substring(i, a);
-			if(!s2.contains("SOS"))
+			int i=s1.indexOf("S");
+			int a=3;
+			int count =0;
+			for(;i<s1.length();i++)
 			{
-				count++;
+				String s2 = s1.substring(i, a);
+				if(!s2.contains("SO"))
+				{
+					count++;
+				}
+				i=a-1;
+				a=a+3;
 			}
-			i=a-1;
-			a=a+3;
+			return count;
 		}
-		return count;
+		else
+		{
+			System.out.println("Enter correct length of message");
+			return 0;
+		}
 		
 	}
 	public static void main(String[] args) {
