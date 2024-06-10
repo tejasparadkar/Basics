@@ -1,0 +1,26 @@
+String Buffer
+
+It is a class present in java.lang package. It is used to create mutable string object. 
+String Buffer class is similar to String class except objects created are mutable(modify able).
+This class is thread safe i.e multiple threads cannot access it simultaneously.
+
+Methods: 
+
+1.StringBuffer append(String s)
+used to append the specified string with this string. It is overloaded with char,boolean,int,float,double
+
+2.StringBuffer insert(int offset, String s)
+used to insert the specified string with this string at the specified position. Overloaded with (int,char),
+(int,boolean),(int,int),(int,float),(int,double),etc.
+
+3.StringBuffer replace(int startIndex, int endIndex, String str)
+used to replace the string from specified start index to end index
+
+4.StringBuffer delete(int startIndex, int endIndex)
+used to delete the string from specified start index to end index
+
+5.StringBuffer reverse()
+used to reverse the string
+
+String builder 
+same as String Buffer but the only difference is the threads are not synchronized.
