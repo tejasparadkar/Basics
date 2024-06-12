@@ -8,6 +8,10 @@ public class ArrayDisplayPrimeNumbers {
 	{
 		int b=n;
 		int count=2;
+		if(b==0||b==1)
+		{
+			count++;
+		}
 		if(b!=0 && b!=1)
 		{
 			for(int j=2;j<=b/2;j++)
